@@ -121,4 +121,34 @@ public class BController {
 		return new BVO();
 	}
 	
+	//------------------------------------------------------------------------------08/20 추가
+	@RequestMapping("loginForm")
+	public String loginForm(Model model) {
+		System.out.println("----------loginForm() 호출-------------");
+		
+		return "loginForm";
+	}
+	
+	@RequestMapping("registerForm")
+	public String registerForm(Model model) {
+		System.out.println("----------registerForm() 호출-------------");
+		
+		return"registerForm";
+	}
+	
+	@RequestMapping("forgot")
+	public String forgot(Model model) {
+		System.out.println("----------forgot() 호출-------------");
+		
+		return "forgot";
+	}
+	
+	@RequestMapping("reset")
+	public String reset(Model model) {
+		System.out.println("----------reset() 호출-------------");
+		
+		return"reset";
+	}
+	
+	
 }

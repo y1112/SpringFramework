@@ -34,7 +34,7 @@
 </li>
 <li>
 	<c:if test="${empty info}">
-		<a href="<%=request.getContextPath() %>/member/memberLogin.do"/>로그인</a>
+		<a href="loginForm"/>로그인</a>
 	</c:if>
 	<c:if test="${!empty info}">
 		<a href="<%=request.getContextPath() %>/member/memberLogout.do"/>로그아웃</a>

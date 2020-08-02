@@ -14,15 +14,18 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.spring.bbsCommand.ListCmd;
 import com.spring.bbsVO.BVO;
-import com.spring.regCommand.RegCmd;
+import com.spring.regCommand.RCmd;
 import com.spring.regCommand.loginCmd;
+import com.spring.regCommand.regCmd;
+import com.spring.regCommand.regListCmd;
 import com.spring.regVO.regVO;
 import com.spring.template.StaticTemplate;
 
 @Controller
 public class RegController {
-	RegCmd cmd = null;
+	RCmd cmd = null;
 	
 	private JdbcTemplate template;
 	
@@ -55,7 +58,7 @@ public class RegController {
 	public String registerForm(Model model) {
 		System.out.println("----------registerForm() 호출-------------");
 		
-		return"registerForm";
+		return "registerForm";
 	}
 	
 	@RequestMapping("forgot")
@@ -69,16 +72,29 @@ public class RegController {
 	public String reset(Model model) {
 		System.out.println("----------reset() 호출-------------");
 		
-		return"reset";
+		return "reset";
 	}
+	
+	@RequestMapping("regOk")
+	public String regOk(HttpServletRequest request, Model model) {
+		System.out.println("----------regOk() 호출-------------");
+		model.addAttribute("request",request);
+		cmd=new regCmd();
+		cmd.service(model);
+		
+		return "regList";
+//		return"regdirect:regList";
+	}
+	
 	
 	@RequestMapping("regList")
 	public String regList(Model model) {
 		System.out.println("----------regList() 호출-------------");
+		cmd = new regListCmd();
+		cmd.service(model); 
 		
-		return"regList";
+		return "regList";
 	}
-	
 	
 
 	@ModelAttribute("regVO")

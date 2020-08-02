@@ -19,6 +19,7 @@ import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
 
+import com.spring.bbsVO.BVO;
 import com.spring.regVO.regVO;
 import com.spring.template.StaticTemplate;
 
@@ -52,13 +53,25 @@ public class regDAO {
 		});
 	}
 	
-	
+	public void regOk(final String name, final String email, final String password) {
+		String sql = "insert into mvc_reg(regNo,name, email, password) "
+				+ "values(seq_reg.nextval,?,?,?)";
+		
+		this.template.update(sql, new PreparedStatementSetter(){			
+			@Override
+			public void setValues(PreparedStatement preparedStatement) throws SQLException{
+				preparedStatement.setString(1,name);
+				preparedStatement.setString(2,email);
+				preparedStatement.setString(3,password);
+			}
+		});
+	}
 	//----
 		public ArrayList<regVO> list(){		
 			
 			ArrayList<regVO> regVOs = null;
-			String sql = "select regNo, email, password, regDate from mvc_reg"
-					+ " order by regDate desc, email asc";
+			String sql = "select regNo, name, email, password, regDate from mvc_reg order by regDate desc, name asc";
+//					+ " order by regDate desc, email asc";
 			
 			/*Jdbctemplate에서 사용할 수 있는 메소드
 			- query() 메소드 :select 쿼리를 실행 할 때 사용하는 메소드
@@ -96,8 +109,9 @@ public class regDAO {
 			*/
 			RowMapper<regVO> rm = new BeanPropertyRowMapper<regVO>(regVO.class);
 			regVOs = (ArrayList<regVO>)template.query(sql, rm);
+			System.out.println(regVOs);
 			return regVOs;
-			
+
 //			Connection connection = null;
 //			PreparedStatement preparedStatement = null;
 //			ResultSet resultSet = null;

@@ -124,17 +124,19 @@ td>img {
 			<thead>
 			<tr>
 				<th width="10%">번호</th>
-				<th width="65%">이메일</th>
+				<th width="10%">이름</th>
+				<th width="55%">이메일</th>
 				<th width="10%">비밀번호</th>
 				<th width="15%">날짜</th>
 			</tr>
 			</thead>
 			<tbody>
 			<!-- 게시글 목록 가져오기 -->
-			<c:forEach items="${list}" var="vo">
+			<c:forEach items="${regList}" var="vo">
 				<tr>
 					<td>${vo.regNo}</td>
-					<td><a href="contentView?regNo=${vo.regNo}">${vo.email}</td>
+					<td><a href="contentView?regNo=${vo.regNo}">${vo.name}</td>
+					<td>${vo.email}</td>
 					<td>${vo.password}</td>
 					<td>${vo.regDate}</td>
 				</tr>

@@ -2,6 +2,6 @@ package com.spring.regCommand;
 
 import org.springframework.ui.Model;
 
-public interface RegCmd {
+public interface RCmd {
 	void service(Model model);
 }

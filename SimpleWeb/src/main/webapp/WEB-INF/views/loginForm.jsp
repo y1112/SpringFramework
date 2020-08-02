@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,10 +46,11 @@ table {
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Login</h4>
-							<form method="POST" class="my-login-validation" novalidate="">
+							<form:form commandName="regVO" action="loginOk" method="POST" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="email">E-Mail Address</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+									<form:input path="email" class="form-control"/>
+<%-- 									<form:input path="email" id="email" class="form-control" name="email" value="" required autofocus/> --%>
 									<div class="invalid-feedback">
 										Email is invalid
 									</div>
@@ -60,7 +62,8 @@ table {
 											Forgot Password?
 										</a>
 									</label>
-									<input id="password" type="password" class="form-control" name="password" required data-eye>
+									<form:password path="password" id="password" class="form-control" name="password"/>
+<%-- 									<form:password path="password" id="password" class="form-control" name="password" required data-eye/> --%>
 								    <div class="invalid-feedback">
 								    	Password is required
 							    	</div>
@@ -68,7 +71,8 @@ table {
 
 								<div class="form-group">
 									<div class="custom-checkbox custom-control">
-										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
+										<input type="checkbox" name="remember" id="remember" class="custom-control-input"/>
+<%-- 										<form:checkbox path="remember" name="remember" id="remember" class="custom-control-input"/> --%>
 										<label for="remember" class="custom-control-label">Remember Me</label>
 									</div>
 								</div>
@@ -81,7 +85,7 @@ table {
 								<div class="mt-4 text-center">
 									Don't have an account? <a href="registerForm">Create One</a>
 								</div>
-							</form>
+							</form:form>
 						</div>
 					</div>
 					<div class="footer">

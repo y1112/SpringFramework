@@ -496,4 +496,6 @@ public class BDAO {
 //		}
 	}//addHit()
 	
+	
+	
 }

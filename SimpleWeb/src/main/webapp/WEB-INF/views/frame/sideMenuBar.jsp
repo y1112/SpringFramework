@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="ko">
 <meta charset="utf-8">
 
@@ -12,7 +13,11 @@
 </button>
 </div>
 <div class="p-4 pt-5">
-<h1><a href="${pageContext.request.contextPath}/" class="logo">임시</a></h1>
+<h1><a href="home" class="logo">
+<img style="width:35%" src="<c:url value='/resources/img/img5.png' />" />
+<img style="width:35%" src="<c:url value='/resources/img/img2.png' />" />
+
+</a></h1>
 
 <ul class="list-unstyled components mb-5">
 <li class="active">
@@ -26,11 +31,11 @@
 </li>
 <c:if test="${empty info}">
 <li>
-<a href="${pageContext.request.contextPath}/member/memberRegForm.do">회원가입</a>
+<a href="registerForm">회원가입</a>
 </li>
 </c:if>
 <li>
-<a href="<%=request.getContextPath() %>/member/memberList.do">회원리스트</a>
+<a href="regList">회원리스트</a>
 </li>
 <li>
 	<c:if test="${empty info}">

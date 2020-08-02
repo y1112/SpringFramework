@@ -10,10 +10,10 @@
 <%@ include file="/WEB-INF/views/frame/top.jsp"%>
 
 
-
+<%-- 
 <link
 	href="<%=request.getContextPath()%>/resources/bootstrap/css/bootstrap.min.css"
-	rel="stylesheet">
+	rel="stylesheet"> --%>
 
 <style>
 #container {

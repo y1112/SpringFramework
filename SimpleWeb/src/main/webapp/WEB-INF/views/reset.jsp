@@ -19,7 +19,7 @@
 			<div class="row justify-content-md-center align-items-center h-100">
 				<div class="card-wrapper">
 					<div class="brand">
-						<img src="resources/img/logo.jpg" alt="bootstrap 4 login page">
+						<img style="margin:15px 0px" src="resources/img/logo.png" alt="bootstrap 4 login page">
 					</div>
 					<div class="card fat">
 						<div class="card-body">

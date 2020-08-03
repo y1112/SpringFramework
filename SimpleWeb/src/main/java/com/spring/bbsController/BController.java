@@ -28,10 +28,10 @@ public class BController {
 	
 	private JdbcTemplate template;
 	
-	@Autowired
+	@Autowired//빈 자동 와이어링
 	public void setTemplate(JdbcTemplate template){
 		this.template = template;
-		StaticTemplate.template = this.template;
+		StaticTemplate.template = this.template;//스프링에서 생성된 template을 static template에 옮김
 	}
 	
 	@RequestMapping("/list")

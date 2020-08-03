@@ -71,13 +71,14 @@ public class BDAO {
 	      	쿼리 실행결과 변경된 행의 개수를 리턴
 	       
 	       :update(String sql)
+	       
 	       :update(String sql, Object[] args)
 	       
 	    - execute() 메소드 : Connection을 직접 사용해야 하는 경우에 사용하는 메소드.
 	       . 커넥션의 생성과 종료는 JdbcTemplate에서 처리하기 때문에 Connection을 종료할 필요가 없다.
 	    
 		*/
-		RowMapper<BVO> rm = new BeanPropertyRowMapper<BVO>(BVO.class);
+		RowMapper<BVO> rm = new BeanPropertyRowMapper<BVO>(BVO.class);//결과 BVO클래스 바인딩
 		bVOs = (ArrayList<BVO>)template.query(sql, rm);
 		return bVOs;
 		

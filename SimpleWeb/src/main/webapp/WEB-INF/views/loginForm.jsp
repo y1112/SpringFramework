@@ -46,6 +46,38 @@ table {
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Login</h4>
+							<!-- 구글 로그인 API -->
+							<hr width="300" color="blue">
+							<meta name = "google-signin-client_id" content = "571655736537-cim9a9dn411ivd0r9llmpp7ag6fj46t7.apps.googleusercontent.com">
+							<script src="https://apis.google.com/js/platform.js" async defer></script>
+							<div align="center" class="g-signin2" data-onsuccess="onSignIn"></div>
+							<script>
+							function onSignIn(googleUser) {
+								  var profile = googleUser.getBasicProfile();
+								  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+								  console.log('Name: ' + profile.getName());
+								  console.log('Image URL: ' + profile.getImageUrl());
+								  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+							
+							}
+
+							</script>
+							<hr width="300" color="blue">
+							<!-- 구글 로그인 API -->
+							<!-- 구글 로그아웃 API -->
+							<hr width="300" color="blue">
+							<a href="#" onclick="signOut();">Sign out</a>
+						<script>
+						  function signOut() {
+						    var auth2 = gapi.auth2.getAuthInstance();
+						    auth2.signOut().then(function () {
+						      console.log('User signed out.');
+						    });
+						  }
+						</script>							
+							<hr width="300" color="blue">
+							<!-- 구글 로그아웃 API -->
+							
 							<form:form commandName="regVO" action="loginOk" method="POST" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="email">E-Mail Address</label>

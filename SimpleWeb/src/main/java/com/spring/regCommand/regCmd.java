@@ -12,14 +12,18 @@ public class regCmd implements RCmd {
 
 	@Override
 	public void service(Model model) {
-		Map<String, Object> map=model.asMap();
-		HttpServletRequest request=(HttpServletRequest)map.get("request");
-		String name=request.getParameter("name");
-		String email=request.getParameter("email");
-		String password=request.getParameter("password");
-		
-		regDAO dao=new regDAO();
+		Map<String, Object> map = model.asMap();
+		HttpServletRequest request = (HttpServletRequest) map.get("request");
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+
+		String googleId = request.getParameter("googleId");
+		if (googleId!=null) {
+		}
+
+		regDAO dao = new regDAO();
 		dao.regOk(name, email, password);
-		
+
 	}
 }

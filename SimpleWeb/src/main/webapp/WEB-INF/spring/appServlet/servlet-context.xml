@@ -32,8 +32,8 @@
 			value="oracle.jdbc.driver.OracleDriver" />
 		<beans:property name="url"
 			value="jdbc:oracle:thin:@localhost:1521:xe" />
-		<beans:property name="username" value="system" />
-		<beans:property name="password" value="oracle" />
+		<beans:property name="username" value="test" />
+		<beans:property name="password" value="test" />
 		<!-- <beans:property name="username" value="scott" /> <beans:property name="password" 
 			value="tiger" /> -->
 	</beans:bean>

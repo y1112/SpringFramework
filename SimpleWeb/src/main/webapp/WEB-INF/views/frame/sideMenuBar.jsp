@@ -31,6 +31,9 @@
 </li>
 <c:if test="${empty info}">
 <li>
+<a href="test3">테스트3</a>
+<a href="test2">테스트2</a>
+<a href="test">테스트</a>
 <a href="registerForm">회원가입</a>
 </li>
 </c:if>

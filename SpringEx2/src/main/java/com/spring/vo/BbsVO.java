@@ -1,26 +1,26 @@
 package com.spring.vo;
-//`bid` int NOT NULL AUTO_INCREMENT,
+//`bid` Integer NOT NULL AUTO_INCREMENT,
 
 //`subject` varchar(200) NOT NULL,
 //`content` text,
 //`writer` varchar(50) NOT NULL,
 //`regdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-//`hit` int DEFAULT '0',
+//`hit` Integer DEFAULT '0',
 
 import java.util.Date;
 
 public class BbsVO {
-	private int bid;
+	private Integer bid;
 	private String subject;
 	private String content;
 	private String writer;
 	private Date regdate;
-	private int hit;
+	private Integer hit;
 
 	public BbsVO() {
 	}
 
-	public BbsVO(int bid, String subject, String content, String writer, Date regdate, int hit) {
+	public BbsVO(Integer bid, String subject, String content, String writer, Date regdate, Integer hit) {
 		super();
 		this.bid = bid;
 		this.subject = subject;
@@ -36,11 +36,11 @@ public class BbsVO {
 				+ ", regdate=" + regdate + ", hit=" + hit + "]";
 	}
 
-	public int getBid() {
+	public Integer getBid() {
 		return bid;
 	}
 
-	public void setBid(int bid) {
+	public void setBid(Integer bid) {
 		this.bid = bid;
 	}
 
@@ -76,11 +76,11 @@ public class BbsVO {
 		this.regdate = regdate;
 	}
 
-	public int getHit() {
+	public Integer getHit() {
 		return hit;
 	}
 
-	public void setHit(int hit) {
+	public void setHit(Integer hit) {
 		this.hit = hit;
 	}
 

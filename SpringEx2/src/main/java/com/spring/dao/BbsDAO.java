@@ -1,10 +1,14 @@
 package com.spring.dao;
 
+import java.util.List;
+
 import com.spring.vo.BbsVO;
 
 public interface BbsDAO {
 
 	public String getTime();
 	
-	public void insertContent(BbsVO bbsvo);
+	public void insert(BbsVO bbsvo);
+	
+	public List<BbsVO> list();
 }

@@ -6,11 +6,15 @@
   <mapper namespace="com.spring.dao.BbsDAO">
   
   <select id="getTime" resultType="string">
-  select now()
+  select now() from tbl_board
   </select>
   
-  <insert id="insertContent">
+  <insert id="insert">
   insert into tbl_board (subject, content, writer) 
   values(#{subject},#{content},#{writer})
   </insert>
+  
+  <select id="list" resultType="com.spring.vo.BbsVO">
+  select subject from tbl_board
+  </select>
   </mapper>

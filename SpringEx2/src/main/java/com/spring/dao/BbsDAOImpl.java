@@ -1,5 +1,7 @@
 package com.spring.dao;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -19,8 +21,13 @@ public class BbsDAOImpl implements BbsDAO {
 	}
 
 	@Override
-	public void insertContent(BbsVO bbsvo) {
-		sqlSession.insert("insertContent",bbsvo);
+	public void insert(BbsVO bbsvo) {
+		sqlSession.insert("insert",bbsvo);
+	}
+	
+	@Override
+	public List<BbsVO> list(){
+		return sqlSession.selectList("select");
 	}
 
 }

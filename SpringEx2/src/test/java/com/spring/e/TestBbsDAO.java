@@ -1,6 +1,7 @@
 package com.spring.e;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -32,13 +33,20 @@ public class TestBbsDAO {
 //	private Date regdate;
 //	private int hit;
 	@Test
-	public void testInsertContent() throws Exception{
+	public void testInsert() throws Exception{
 		BbsVO bbsvo=new BbsVO();
 		bbsvo.setSubject("zzz");
 		bbsvo.setContent("asdadasdasdaasads");
 		bbsvo.setWriter("홍길동");
 		
-		bbsDAO.insertContent(bbsvo);
+		bbsDAO.insert(bbsvo);
+	}
+	
+	@Test
+	public void testSelect() throws Exception{
+		List<BbsVO> list=bbsDAO.list();
+		System.out.println(list);
+		
 	}
 
 }

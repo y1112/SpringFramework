@@ -13,19 +13,19 @@
   <title>Spring Project</title>
 
   <!-- Favicons -->
-  <link href="resources/img/favicon.png" rel="icon">
-  <link href="resources/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../resources/img/favicon.png" rel="icon">
+  <link href="../resources/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Bootstrap core CSS -->
-  <link href="resources/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../resources/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--external css-->
-  <link href="resources/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="resources/css/zabuto_calendar.css">
-  <link rel="stylesheet" type="text/css" href="resources/lib/gritter/css/jquery.gritter.css" />
+  <link href="../resources/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/zabuto_calendar.css">
+  <link rel="stylesheet" type="text/css" href="../resources/lib/gritter/css/jquery.gritter.css" />
   <!-- Custom styles for this template -->
-  <link href="resources/css/style.css" rel="stylesheet">
-  <link href="resources/css/style-responsive.css" rel="stylesheet">
-  <script src="resources//ib/chart-master/Chart.js"></script>
+  <link href="../resources/css/style.css" rel="stylesheet">
+  <link href="../resources/css/style-responsive.css" rel="stylesheet">
+  <script src="../resources//ib/chart-master/Chart.js"></script>
 
   <!-- =======================================================
     Template Name: Dashio
@@ -133,7 +133,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="resources/img/ui-zac.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="../resources/img/ui-zac.jpg"></span>
                   <span class="subject">
                   <span class="from">Zac Snider</span>
                   <span class="time">Just now</span>
@@ -145,7 +145,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="resources/img/ui-divya.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="../resources/img/ui-divya.jpg"></span>
                   <span class="subject">
                   <span class="from">Divya Manian</span>
                   <span class="time">40 mins.</span>
@@ -157,7 +157,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="resources/img/ui-danro.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="../resources/img/ui-danro.jpg"></span>
                   <span class="subject">
                   <span class="from">Dan Rogers</span>
                   <span class="time">2 hrs.</span>
@@ -169,7 +169,7 @@
               </li>
               <li>
                 <a href="index.html#">
-                  <span class="photo"><img alt="avatar" src="resources/img/ui-sherman.jpg"></span>
+                  <span class="photo"><img alt="avatar" src="../resources/img/ui-sherman.jpg"></span>
                   <span class="subject">
                   <span class="from">Dj Sherman</span>
                   <span class="time">4 hrs.</span>

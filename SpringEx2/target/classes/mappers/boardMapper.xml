@@ -9,7 +9,7 @@
 		values(#{subject},#{content},#{writer})
 	</insert>
 
-	<select id="read" resultType="com.spring.vo.BbsVO">
+	<select id="read" resultType="BbsVO">
 		select bid, subject, content, writer, regdate, hit
 		from tbl_board
 		where bid=#{bid}

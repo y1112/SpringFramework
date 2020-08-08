@@ -1,4 +1,4 @@
-package com.spring.e;
+package com.spring.controller;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

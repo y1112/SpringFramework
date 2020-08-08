@@ -21,6 +21,21 @@ public class BbsServiceImpl implements BbsService {
 	}
 	
 	@Override
+	public BbsVO read(Integer bid) throws Exception {
+		return bdao.read(bid);
+	}
+
+	@Override
+	public void modify(BbsVO bvo) throws Exception {
+		bdao.update(bvo);
+	}
+
+	@Override
+	public void remove(Integer bid) throws Exception {
+		bdao.delete(bid);
+	}
+
+	@Override
 	public List<BbsVO> list() throws Exception{
 		return bdao.list();
 	}

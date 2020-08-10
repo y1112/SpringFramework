@@ -25,19 +25,19 @@
 						<div class="form-group">
 							<label class="col-sm-2 col-sm-2 control-label">제목</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" name="subject">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 col-sm-2 control-label">내용</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control">
+								<textarea class="form-control" name="content" rows="4"></textarea>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 col-sm-2 control-label">작성자</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control round-form">
+								<input type="text" class="form-control round-form" name="writer">
 							</div>
 						</div>
 						<div class="form-group">

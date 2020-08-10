@@ -15,14 +15,13 @@
 			<i class="fa fa-angle-right"></i>글쓰기 페이지
 		</h3>
 		<!-- BASIC FORM ELELEMNTS -->
-		<form class="form-horizontal style-form" method="post">
-			<input type="hidden" name="bid" value="${bbsVO.bid}">
-		</form>
 		<div class="row mt">
 			<div class="col-lg-12">
 				<div class="form-panel">
+		<form class="form-horizontal style-form" method="post">
+			<input type="hidden" name="bid" value="${bbsVO.bid}">
 					<h4 class="mb">
-						<i class="fa fa-angle-right"></i>입력 사항
+						<i class="fa fa-angle-right"></i>조회 내용
 					</h4>
 					<div class="form-group">
 						<label class="col-sm-2 col-sm-2 control-label">제목</label>
@@ -52,10 +51,10 @@
 							<button type="submit" class="btn btn-theme02">목록으로</button>
 						</div>
 					</div>
+		</form>
 				</div>
 			</div>
 		</div>
-
 
 	</section>
 </section>

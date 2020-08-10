@@ -31,4 +31,17 @@
   ]]>
 	</select>
 
+	<select id="listPage" resultType="BbsVO">
+	<![CDATA[
+		select bid, subject, content, writer, regdate, hit from tbl_board where bid>0 order by bid desc, regdate desc 
+		limit #{page},10
+	]]>
+	</select>
+	
+	<select id="listCriteria" resultType="BbsVO">
+	<![CDATA[
+		select bid, subject, content, writer, regdate, hit from tbl_board where bid>0 order by bid desc, regdate desc 
+		limit #{startPage},#{numPerPage}
+	]]>
+	</select>
 </mapper>

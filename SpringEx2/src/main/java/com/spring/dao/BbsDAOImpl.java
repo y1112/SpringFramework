@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.spring.vo.BbsVO;
+import com.spring.vo.PageCriteria;
 
 @Repository//DAO로 인식하도록 어노테이션 설정
 public class BbsDAOImpl implements BbsDAO {
@@ -39,5 +40,20 @@ public class BbsDAOImpl implements BbsDAO {
 	public List<BbsVO> list(){
 		return sqlSession.selectList("list");
 	}
+	
+	@Override
+	public List<BbsVO> listPage(int page) throws Exception{
+		if(page<=0) {
+			page=1;
+		}
+		page=(page-1)*10;
+		
+		return sqlSession.selectList("listPage",page);
+	}
+	
+//	@Override
+//	public List<BbsVO> listCriteria(PageCriteria pageCriteria) throws Exception{
+//		pageCriteria.se
+//	}
 
 }

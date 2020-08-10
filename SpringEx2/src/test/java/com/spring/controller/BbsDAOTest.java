@@ -23,37 +23,47 @@ public class BbsDAOTest {
 	
 	private static Logger logger=LoggerFactory.getLogger(BbsDAOTest.class);
 	
-	@Test
-	public void insertTest() throws Exception{
-		BbsVO bbsvo=new BbsVO();
-		bbsvo.setSubject("zz");
-		bbsvo.setContent("aaaaaaaaaaaaaaaaaa");
-		bbsvo.setWriter("고길동");
-		bdao.insert(bbsvo);
-	}
+//	@Test
+//	public void insertTest() throws Exception{
+//		BbsVO bbsvo=new BbsVO();
+//		bbsvo.setSubject("zz");
+//		bbsvo.setContent("aaaaaaaaaaaaaaaaaa");
+//		bbsvo.setWriter("고길동");
+//		bdao.insert(bbsvo);
+//	}
+//	
+//	@Test
+//	public void readTest() throws Exception{
+//		BbsVO bbsvo=bdao.read(1);
+////		logger.info(bdao.read(1).toString());
+//	}
+//	
+//	@Test
+//	public void updateTest() throws Exception{
+//		BbsVO bbsvo=new BbsVO();
+//		bbsvo.setBid(2);
+//		bbsvo.setContent("update!");
+//		bbsvo.setSubject("oo");
+//		bdao.update(bbsvo);
+//	}
+//	
+//	@Test
+//	public void deleteTest() throws Exception{
+//		bdao.delete(5);
+//	}
+//	
+//	@Test
+//	public void listTest() throws Exception{
+//		logger.info(bdao.list().toString());
+//	}
 	
 	@Test
-	public void readTest() throws Exception{
-		BbsVO bbsvo=bdao.read(1);
-//		logger.info(bdao.read(1).toString());
-	}
-	
-	@Test
-	public void updateTest() throws Exception{
-		BbsVO bbsvo=new BbsVO();
-		bbsvo.setBid(2);
-		bbsvo.setContent("update!");
-		bbsvo.setSubject("oo");
-		bdao.update(bbsvo);
-	}
-	
-	@Test
-	public void deleteTest() throws Exception{
-		bdao.delete(5);
-	}
-	
-	@Test
-	public void listTest() throws Exception{
-		logger.info(bdao.list().toString());
+	public void listPageTest() throws Exception{
+		int page=5;
+		List<BbsVO> list=bdao.listPage(page);
+		
+		for(BbsVO bbsVO: list) {
+			logger.info(bbsVO.getBid()+":"+bbsVO.getSubject());
+		}
 	}
 }

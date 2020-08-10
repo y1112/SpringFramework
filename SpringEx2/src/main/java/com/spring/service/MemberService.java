@@ -1,16 +1,14 @@
-package com.spring.dao;
+package com.spring.service;
 
 import java.util.List;
 
 import com.spring.vo.BbsVO;
 import com.spring.vo.MemberVO;
 
-public interface MemberDAO {
+public interface MemberService {
 	
-	public String getTime();
+	public void register(MemberVO mvo) throws Exception;
 	
-	public void insertMember(MemberVO mvo);
 	
 	public List<MemberVO> list() throws Exception;
-
 }

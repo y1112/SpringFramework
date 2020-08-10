@@ -16,10 +16,6 @@
 			 HTML5에서 추가된 속성, ARIA(Accessible Rich Internet Application)라는 HTML5의 상세 규격 중 하나
 			
 		  -->
-		<form role="form" method="post">
-			<input type="hidden" name="bid" value="${bbsVO.bid}" />
-		</form>
-
 		<div class="row mt">
 			<div class="col-lg-12">
 				<div class="form-panel">
@@ -31,7 +27,7 @@
 						<div class="form-group">
 							<label class="col-sm-2 col-sm-2 control-label">글번호</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="subject"
+								<input type="text" class="form-control" name="bid"
 									value="${bbsVO.bid}" readonly>
 							</div>
 						</div>
@@ -63,7 +59,7 @@
 
 				<div class="form-group">
 					<div class="col-sm-12" align="center">
-						<button type="submit" id="btn_modify" class="btn btn-theme02">저장하기</button>
+						<button type="submit" id="btn_save" class="btn btn-theme02">저장하기</button>
 						&nbsp;
 						<button type="submit" id="btn_cancel" class="btn btn-theme03">취소하기</button>
 					</div>
@@ -75,22 +71,17 @@
 						var frmObj = $("form[role='form']");
 
 						console.log("폼태그입니다..");
-
-						$("#btn_modify").on("click", function() {
-							frmObj.attr("action", "/bbs/modify");
-							frmObj.attr("method", "get");
+						
+						
+						$("#btn_save").on("click",function(){
 							frmObj.submit();
 						});
-
-						$("#btn_delete").on("click", function() {
-							frmObj.attr("action", "/bbs/delete");
-							frmObj.submit();
-						});
-
-						$("#btn_list").on("click", function() {
-							self.location = "/bbs/list";
+						
+						$("#btn_cancel").on("click",function(){
+							self.location="/bbs/list";
 						});
 					});
+						
 				</script>
 
 

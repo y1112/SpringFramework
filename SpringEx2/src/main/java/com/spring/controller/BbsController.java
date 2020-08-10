@@ -86,4 +86,5 @@ public class BbsController {
 		
 		return "redirect:/bbs/list";
 	}
+	
 }

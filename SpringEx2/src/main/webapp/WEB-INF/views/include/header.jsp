@@ -22,9 +22,12 @@
   <link href="../resources/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="../resources/css/zabuto_calendar.css">
   <link rel="stylesheet" type="text/css" href="../resources/lib/gritter/css/jquery.gritter.css" />
+  
   <!-- Custom styles for this template -->
   <link href="../resources/css/style.css" rel="stylesheet">
   <link href="../resources/css/style-responsive.css" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../resources//ib/chart-master/Chart.js"></script>
 
   <!-- =======================================================

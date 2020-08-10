@@ -59,6 +59,31 @@ public class BbsController {
 		logger.info("글내용확인!");
 		logger.info(bsvc.read(bid).toString());
 		
+	}
+	
+	
+	@RequestMapping(value="/delete", method=RequestMethod.POST)
+	public String delete(@RequestParam("bid") int bid, RedirectAttributes reAttr) throws Exception{
+		bsvc.remove(bid);
 		
+		reAttr.addFlashAttribute("result","delete success");
+		
+		return "redirect:/bbs/list";
+	}
+	
+	@RequestMapping(value="/modify", method=RequestMethod.GET)//수정 확인:GET
+	public void modifyGET(int bid,Model model) throws Exception{
+		model.addAttribute(bsvc.read(bid));
+	}
+	
+	//실제 수정:POST
+	@RequestMapping(value="/modify", method=RequestMethod.POST)
+	public String modifyPOST(BbsVO bvo, RedirectAttributes reAttr) throws Exception{
+		logger.info("modifyPOST().....");
+		bsvc.modify(bvo);
+		
+		reAttr.addFlashAttribute("result","success");
+		
+		return "redirect:/bbs/list";
 	}
 }

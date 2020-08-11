@@ -14,6 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.spring.dao.BbsDAO;
 import com.spring.vo.BbsVO;
+import com.spring.vo.PageCriteria;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations= {"file:src/main/webapp/WEB-INF/spring/**/*.xml"})
@@ -57,13 +58,28 @@ public class BbsDAOTest {
 //		logger.info(bdao.list().toString());
 //	}
 	
-	@Test
-	public void listPageTest() throws Exception{
-		int page=5;
-		List<BbsVO> list=bdao.listPage(page);
+//	@Test
+//	public void listPageTest() throws Exception{
+//		int page=5;
+//		List<BbsVO> list=bdao.listPage(page);
+//		
+//		for(BbsVO bbsVO: list) {
+//			logger.info(bbsVO.getBid()+":"+bbsVO.getSubject());
+//		}
+//	}
+//	
+	@Test 
+	public void listCriteriaTest() throws Exception{
+		PageCriteria pCriteria=new PageCriteria();
+		pCriteria.setPage(3);
+		pCriteria.setNumPerPage(15);
 		
-		for(BbsVO bbsVO: list) {
-			logger.info(bbsVO.getBid()+":"+bbsVO.getSubject());
-		}
+		List<BbsVO> list=bdao.listCriteria(pCriteria);
+		logger.info(list.toString());
+		
+//		for(BbsVO bvo:list) {
+//			logger.info(bvo.getBid()+":"+bvo.getSubject());
+//			logger.info(bvo.getBid()+":"+bvo.getSubject());
+//		}
 	}
 }

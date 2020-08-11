@@ -19,5 +19,5 @@ public interface BbsDAO {
 	
 	public List<BbsVO> listPage(int page) throws Exception;
 
-//	public List<BbsVO> listCriteria(PageCriteria pageCria) throws Exception;
+	public List<BbsVO> listCriteria(PageCriteria pageCritearia) throws Exception;
 }

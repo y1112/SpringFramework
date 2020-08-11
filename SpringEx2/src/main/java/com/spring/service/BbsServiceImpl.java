@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.dao.BbsDAO;
 import com.spring.vo.BbsVO;
+import com.spring.vo.PageCriteria;
 
 @Service
 public class BbsServiceImpl implements BbsService {
@@ -38,6 +39,11 @@ public class BbsServiceImpl implements BbsService {
 	@Override
 	public List<BbsVO> list() throws Exception{
 		return bdao.list();
+	}
+	
+	@Override
+	public List<BbsVO> listCriteria(PageCriteria pCriteria) throws Exception{
+		return bdao.listCriteria(pCriteria);
 	}
 
 }

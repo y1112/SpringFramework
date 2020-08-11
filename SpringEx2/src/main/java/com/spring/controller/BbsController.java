@@ -13,6 +13,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.service.BbsService;
 import com.spring.vo.BbsVO;
+import com.spring.vo.PageCriteria;
+import com.spring.vo.PagingMaker;
 
 @Controller
 @RequestMapping("/bbs/*")
@@ -85,6 +87,23 @@ public class BbsController {
 		reAttr.addFlashAttribute("result","success");
 		
 		return "redirect:/bbs/list";
+	}
+//	
+//	@RequestMapping(value="/pageList", method=RequestMethod.GET)
+//	public void pageListTest(PageCriteria pCriteria,Model model) throws Exception{
+//		logger.info("pageList().....");
+//		
+//		model.addAttribute("list",bsvc.listCriteria(pCriteria));
+//	}
+	
+	@RequestMapping(value="/pageList",method=RequestMethod.GET)
+	public void pageList(PageCriteria pCria,Model model) throws Exception{
+		logger.info(pCria.toString());
+		model.addAttribute("list",bsvc.listCriteria(pCria));
+		PagingMaker pagingMaker=new PagingMaker();
+		pagingMaker.setCri(pCria);
+		pagingMaker.setTotalData(155);
+		model.addAttribute("pagingMaker",pagingMaker);
 	}
 	
 }

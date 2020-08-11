@@ -51,9 +51,10 @@ public class BbsDAOImpl implements BbsDAO {
 		return sqlSession.selectList("listPage",page);
 	}
 	
-//	@Override
-//	public List<BbsVO> listCriteria(PageCriteria pageCriteria) throws Exception{
-//		pageCriteria.se
-//	}
+	@Override
+	public List<BbsVO> listCriteria(PageCriteria pageCriteria) throws Exception{
+		return sqlSession.selectList("listCriteria",pageCriteria);
+	}
+	
 
 }

@@ -3,6 +3,7 @@ package com.spring.service;
 import java.util.List;
 
 import com.spring.vo.BbsVO;
+import com.spring.vo.PageCriteria;
 
 public interface BbsService {
 	
@@ -15,4 +16,6 @@ public interface BbsService {
 	public void remove(Integer bid) throws Exception;
 	
 	public List<BbsVO> list() throws Exception;
+	
+	public List<BbsVO> listCriteria(PageCriteria pCriteria) throws Exception;
 }

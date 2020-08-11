@@ -83,7 +83,7 @@
 					});
 					
 					$("#btn_list").on("click", function(){
-						self.location = "/bbs/list";
+						self.location = "/bbs/pageList";
 					});
 				});
 			</script>

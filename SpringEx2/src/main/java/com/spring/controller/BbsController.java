@@ -42,7 +42,8 @@ public class BbsController {
 //		model.addAttribute("result","게시글 등록 완료");//영문으로 처리시 url에 표시됨
 		reAttr.addFlashAttribute("result","success");//전송 결과 숨김
 //		return "/bbs/resultOk";
-		return "redirect:/bbs/list";
+		return "redirect:/bbs/pageList";
+//		return "redirect:/bbs/list";
 	}
 	
 	@RequestMapping(value="/list", method=RequestMethod.GET)
@@ -70,7 +71,7 @@ public class BbsController {
 		
 		reAttr.addFlashAttribute("result","delete success");
 		
-		return "redirect:/bbs/list";
+		return "redirect:/bbs/pageList";
 	}
 	
 	@RequestMapping(value="/modify", method=RequestMethod.GET)//수정 확인:GET

@@ -4,6 +4,7 @@
 <%@ page session="false"%>
 
 <%@ include file="include/header.jsp"%>
+
 <!-- main -->
 <section id="main-content">
 	<section class="wrapper">

@@ -78,7 +78,7 @@
 						});
 						
 						$("#btn_cancel").on("click",function(){
-							self.location="/bbs/list";
+							self.location="/bbs/pageList";
 						});
 					});
 						
